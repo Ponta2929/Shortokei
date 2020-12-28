@@ -73,6 +73,11 @@ namespace Shortokei
         {
             get
             {
+                if (DesignMode)
+                {
+                    return base.CreateParams;
+                }
+
                 const int WS_EX_LAYERED = 0x00080000;
                 const int WS_BORDER = 0x00800000;
                 const int WS_DLGFRAME = 0x00400000;

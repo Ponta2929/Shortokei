@@ -55,13 +55,13 @@ namespace Shortokei
             pen_border = new Pen(Color.FromArgb(128, 128, 128, 128));
 
             // 描画更新
-            updateTimer.Start();
+            Timer_Update.Start();
 
             // 表示
             UpdateGadget();
         }
 
-        private void UpdateTimer_Tick(object sender, EventArgs e)
+        private void Timer_Update_Tick(object sender, EventArgs e)
         {
             // 1分ごとにガジェットを更新する。
             if (DateTime.Now.Second == 0)
@@ -407,11 +407,7 @@ namespace Shortokei
 
         private void NotifyIcon_Main_MouseClick(object sender, MouseEventArgs e)
         {
-            // 全面表示
-            if (e.Button == MouseButtons.Left)
-            {
-                Activate();
-            }
+            this.Activate();
         }
 
         private void ToolStripMenuItem_Lock_CheckedChanged(object sender, EventArgs e)
