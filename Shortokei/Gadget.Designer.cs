@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gadget));
             this.Timer_Update = new System.Windows.Forms.Timer(this.components);
             this.ContextMenuStrip_Main = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ToolStripMenuItem_Setting = new System.Windows.Forms.ToolStripMenuItem();
@@ -113,7 +112,7 @@
             // NotifyIcon_Main
             // 
             this.NotifyIcon_Main.ContextMenuStrip = this.ContextMenuStrip_Main;
-            this.NotifyIcon_Main.Icon = Properties.Resources.tokei;
+            this.NotifyIcon_Main.Icon = global::Shortokei.Properties.Resources.tokei;
             this.NotifyIcon_Main.Text = "しょーとけい";
             this.NotifyIcon_Main.Visible = true;
             this.NotifyIcon_Main.MouseClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon_Main_MouseClick);

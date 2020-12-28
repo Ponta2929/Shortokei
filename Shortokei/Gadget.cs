@@ -210,8 +210,11 @@ namespace Shortokei
             using (var g = Graphics.FromImage(surface))
             {
                 // アンチエイリアスON
-                g.SmoothingMode = SmoothingMode.AntiAlias;
-                g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+                if (setting.Antialias)
+                {
+                    g.SmoothingMode = SmoothingMode.AntiAlias;
+                    g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+                }
 
                 // 画面消去
                 g.Clear(Color.Transparent);
@@ -407,7 +410,10 @@ namespace Shortokei
 
         private void NotifyIcon_Main_MouseClick(object sender, MouseEventArgs e)
         {
-            this.Activate();
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Activate();
+            }
         }
 
         private void ToolStripMenuItem_Lock_CheckedChanged(object sender, EventArgs e)

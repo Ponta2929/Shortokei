@@ -33,6 +33,7 @@ namespace Shortokei
             this.TabControl_Main = new System.Windows.Forms.TabControl();
             this.TabPage_View = new System.Windows.Forms.TabPage();
             this.GroupBox_Ext = new System.Windows.Forms.GroupBox();
+            this.CheckBox_Finished = new System.Windows.Forms.CheckBox();
             this.CheckBox_Division = new System.Windows.Forms.CheckBox();
             this.GroupBox_BackgroundColor = new System.Windows.Forms.GroupBox();
             this.NumericUpDown_BackgroundColor2 = new System.Windows.Forms.NumericUpDown();
@@ -105,7 +106,7 @@ namespace Shortokei
             this.Button_Default = new System.Windows.Forms.Button();
             this.Button_OK = new System.Windows.Forms.Button();
             this.ToolTip_Description = new System.Windows.Forms.ToolTip(this.components);
-            this.CheckBox_Finished = new System.Windows.Forms.CheckBox();
+            this.CheckBox_Antialias = new System.Windows.Forms.CheckBox();
             this.TabControl_Main.SuspendLayout();
             this.TabPage_View.SuspendLayout();
             this.GroupBox_Ext.SuspendLayout();
@@ -164,6 +165,7 @@ namespace Shortokei
             // 
             // GroupBox_Ext
             // 
+            this.GroupBox_Ext.Controls.Add(this.CheckBox_Antialias);
             this.GroupBox_Ext.Controls.Add(this.CheckBox_Finished);
             this.GroupBox_Ext.Controls.Add(this.CheckBox_Division);
             this.GroupBox_Ext.Location = new System.Drawing.Point(215, 250);
@@ -172,6 +174,17 @@ namespace Shortokei
             this.GroupBox_Ext.TabIndex = 11;
             this.GroupBox_Ext.TabStop = false;
             this.GroupBox_Ext.Text = "その他";
+            // 
+            // CheckBox_Finished
+            // 
+            this.CheckBox_Finished.AutoSize = true;
+            this.CheckBox_Finished.Location = new System.Drawing.Point(14, 45);
+            this.CheckBox_Finished.Name = "CheckBox_Finished";
+            this.CheckBox_Finished.Size = new System.Drawing.Size(88, 16);
+            this.CheckBox_Finished.TabIndex = 1;
+            this.CheckBox_Finished.Text = "×印を付ける";
+            this.CheckBox_Finished.UseVisualStyleBackColor = true;
+            this.CheckBox_Finished.CheckedChanged += new System.EventHandler(this.CheckBox_Finished_CheckedChanged);
             // 
             // CheckBox_Division
             // 
@@ -1077,16 +1090,16 @@ namespace Shortokei
             this.Button_OK.UseVisualStyleBackColor = true;
             this.Button_OK.Click += new System.EventHandler(this.Button_OK_Click);
             // 
-            // CheckBox_Finished
+            // CheckBox_Antialias
             // 
-            this.CheckBox_Finished.AutoSize = true;
-            this.CheckBox_Finished.Location = new System.Drawing.Point(14, 45);
-            this.CheckBox_Finished.Name = "CheckBox_Finished";
-            this.CheckBox_Finished.Size = new System.Drawing.Size(88, 16);
-            this.CheckBox_Finished.TabIndex = 1;
-            this.CheckBox_Finished.Text = "×印を付ける";
-            this.CheckBox_Finished.UseVisualStyleBackColor = true;
-            this.CheckBox_Finished.CheckedChanged += new System.EventHandler(this.CheckBox_Finished_CheckedChanged);
+            this.CheckBox_Antialias.AutoSize = true;
+            this.CheckBox_Antialias.Location = new System.Drawing.Point(14, 72);
+            this.CheckBox_Antialias.Name = "CheckBox_Antialias";
+            this.CheckBox_Antialias.Size = new System.Drawing.Size(94, 16);
+            this.CheckBox_Antialias.TabIndex = 2;
+            this.CheckBox_Antialias.Text = "アンチエイリアス";
+            this.CheckBox_Antialias.UseVisualStyleBackColor = true;
+            this.CheckBox_Antialias.CheckedChanged += new System.EventHandler(this.CheckBox_Antialias_CheckedChanged);
             // 
             // SettingForm
             // 
@@ -1217,5 +1230,6 @@ namespace Shortokei
         private System.Windows.Forms.Button Button_OK;
         private System.Windows.Forms.ToolTip ToolTip_Description;
         private System.Windows.Forms.CheckBox CheckBox_Finished;
+        private System.Windows.Forms.CheckBox CheckBox_Antialias;
     }
 }

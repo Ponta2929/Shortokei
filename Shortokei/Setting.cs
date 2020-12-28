@@ -44,6 +44,8 @@ namespace Shortokei
         public int SelectTime2 { get; set; } = 60;
         public bool TimeLock { get; set; } = false;
 
+        public bool Antialias { get; set; } = true;
+
         public ColorEx BackgroundColor1 { get; set; } = Color.FromArgb(200, 255, 255, 255);
         public ColorEx BackgroundColor2 { get; set; } = Color.FromArgb(20, 245, 245, 245);
 

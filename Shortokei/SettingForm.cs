@@ -81,6 +81,7 @@ namespace Shortokei
             CheckBox_Division.Checked = setting.Division;
             CheckBox_WindowSnap.Checked = setting.Gadget_WindowSnap;
             CheckBox_TimeLock.Checked = setting.TimeLock;
+            CheckBox_Antialias.Checked = setting.Antialias;
 
             Label_EndStringFontValue.Text = $"{setting.EndStringFont.FontFamily.Name}, {setting.EndStringFont.Size}pt";
             ToolTip_Description.SetToolTip(Label_EndStringFontValue, $"{setting.EndStringFont.FontFamily.Name}, {setting.EndStringFont.Size}pt");
@@ -351,6 +352,15 @@ namespace Shortokei
         {
             // 目盛りを付ける
             setting.Finished = CheckBox_Finished.Checked;
+
+            // 更新
+            setting.ValueChange();
+        }
+        
+        private void CheckBox_Antialias_CheckedChanged(object sender, EventArgs e)
+        {
+            // アンチエイリアス
+            setting.Antialias = CheckBox_Antialias.Checked;
 
             // 更新
             setting.ValueChange();
